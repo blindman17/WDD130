@@ -23,6 +23,107 @@
     
 </header>
 
+<div> <!--ADD A COMPONENT ASSIGNMENT -->
+<!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img class="img2" src="images/Anycubic.jpg" alt="Anycubic Printer">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img class="img2" src="images/makerbotresized.jpg" alt="Makerbot Printer">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img class="img2" src="images/printexample.jpg"  alt="printer">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img class="img2" src="images/Rabbit.jpg"  alt="Rabbit 3D Print">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img class="img2" src="images/resin.jpg" alt="Resin Print" >
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img class="img2" src="images/slicer.jpg" alt="Slicer Software">
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="images/Anycubic.jpg" width="250" height="200" onclick="currentSlide(1)" alt="Anycubic Printer">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/makerbot.jpg" width="250" height="200"  onclick="currentSlide(2)" alt="Makerbot Printer">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/printexample.jpg" width="250" height="200"   onclick="currentSlide(3)" alt="Printer in Action">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/Rabbit.jpg" width="250" height="200"   onclick="currentSlide(4)" alt="Rabbit 3D Print">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/resin.jpg"  width="250" height="200"  onclick="currentSlide(5)" alt="Resin Print">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/slicer.jpg" width="250" height="200"   onclick="currentSlide(6)" alt="Slicer Software">
+      </div>
+    </div>
+  </div>
+
+    <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+    </script>
+</div>
+
     <div>
         <h2> FAQ</h2>
         <section>
@@ -33,7 +134,9 @@
         
             <h3 class="h3">QUESTION: How much is a 3D printer? </h3>
 
-            <img class="img" src="images/Anycubic.jpg" alt="Anycubic Printer">
+            <img class="img" src="images/Anycubic.jpg"       
+            width="400"
+            height="500" alt="Anycubic Printer">
 
             <h4 class="h4">Printers</h4>
             <p>
@@ -44,7 +147,7 @@
                 After a few years I upgraded to a bigger printer once I understood more about what I was doing. 
             </p>
 
-            <img class="img" src="images/resin.jpg" alt="Resin Print">
+            
 
 
             <h3>QUESTION: What materials do you use? </h3>
@@ -57,7 +160,9 @@
 
             </p>
 
-            
+            <img class="img" src="images/resin.jpg" 
+            width="400" 
+            height="500"  alt="Resin Print">
 
 
         </section>
