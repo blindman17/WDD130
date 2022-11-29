@@ -87,7 +87,7 @@ Font {
         border: 10px solid #1789fc;
         transition: transform .5s;
         box-shadow: 5px 5px 10px;
-        width: 400px;
+        width: auto;
         height: 500px;
         margin-left: auto;
         margin-right: auto;
@@ -219,7 +219,7 @@ Font {
         transition: transform .5s;
         box-shadow: 5px 5px 10px;
         width: 100%;
-        height: 500px;
+        height: 750px;
  
         display: block;
       }
