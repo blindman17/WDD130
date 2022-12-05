@@ -89,7 +89,7 @@ padding: 2em;
     }
 
     .img {
-        border: 10px solid #1789fc;
+        border: 10px solid #0b3954;
         transition: transform .5s;
         box-shadow: 5px 5px 10px;
         width: auto;
@@ -220,7 +220,7 @@ padding: 2em;
       }
 
       .img2 {
-        border: 10px solid #1789fc;
+        border: 10px solid #0b3954;
         transition: transform .5s;
         box-shadow: 5px 5px 10px;
         width: 100%;
