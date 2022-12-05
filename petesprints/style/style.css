@@ -64,6 +64,11 @@ Font {
         margin: 20px;
     }
 
+    p {
+text-align: center;
+padding: 1em;
+    }
+
     h1, h2, h4, h3{
         text-align: center;
         color: #0A122A;
